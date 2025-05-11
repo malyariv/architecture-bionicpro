@@ -122,19 +122,7 @@
         "attributes": {
           "pkce.code.challenge.method": "S256",
           "access.token.claim": "true"
-        },
-        "defaultClientScopes": [
-          "reports-api-audience"
-        ],
-        "protocolMappers": [
-          {
-            "name": "realm roles",
-            "protocol": "openid-connect",
-            "protocolMapper": "oidc-audience-resolve-mapper",
-            "consentRequired": false,
-            "config": {}
-          }
-        ]        
+        }        
       },
       {
         "clientId": "reports-api",
