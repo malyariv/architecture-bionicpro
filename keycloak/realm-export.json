@@ -117,7 +117,7 @@
         "redirectUris": ["http://localhost:3000/*"],
         "webOrigins": ["http://localhost:3000"],
         "standardFlowEnabled": true,
-        "directAccessGrantsEnabled": false,
+        "directAccessGrantsEnabled": true,
         "implicitFlowEnabled": false,
         "attributes": {
           "pkce.code.challenge.method": "S256",
@@ -130,15 +130,9 @@
           {
             "name": "realm roles",
             "protocol": "openid-connect",
-            "protocolMapper": "oidc-usermodel-realm-role-mapper",
+            "protocolMapper": "oidc-audience-resolve-mapper",
             "consentRequired": false,
-            "config": {
-              "multivalued": "true",
-              "user.attribute": "role",
-              "access.token.claim": "true",
-              "claim.name": "realm_access.roles",
-              "jsonType.label": "String"
-            }
+            "config": {}
           }
         ]        
       },
